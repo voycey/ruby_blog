@@ -2,8 +2,14 @@
 <ul id="posts">
   <% @posts.each do |post| %>
     <li>
-      <strong><%= link_to post.title, post_path(post) %></strong>
+      <strong><%= link_to post.title, post_path(post),
+                          class: 'post_title', id: "post_#{post.id}" %>
+      </strong>
       <p><%= post.body %></p>
     </li>
+      <br />
   <% end %>
 </ul>
+<br />
+<br />
+<%= link_to "Create a New Post", new_post_path, class: "new_post" %>
