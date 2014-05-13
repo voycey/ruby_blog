@@ -1,0 +1,5 @@
+<div>
+  <p>Posted <%= comment.created_at.to_formatted_s(:long)  %></p>
+  <p><strong>Comment by <%= comment.author_name %></strong></p>
+  <p class="comment"><%= comment.body %></p>
+</div>
